@@ -4,11 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <!-- 1. Inline -->
+    <style>
+        /* 1. Contoh Class (.) */
+        .p3 {color:red;} 
+        .p1 {color: blue;} 
+
+        /* 2. Contoh ID (#) */
+        #p4 {color:aqua;}
+
+
+        span {
+            color: lightgreen; 
+        }
+    </style>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!-- Ini Isi konten dengan semantic / Non Semantic -->
-    <h1>Ini Contoh</h1>
-    <p>Ini Contoh</p>
-    <!-- End Of isi  -->
+    <span>Ini Span</span>
+
+    <!-- Class = Identitas (Pemberian nama kepada tag) -->
+    <p class="p1">Ini Paragraf</p>
+    <p class="p1">Ini Paragraf</p>
+
+
+    <p class="p3">Ini Paragraf</p>
+
+    <!-- ID Identitas (Pemberian nama kepada tag) -->
+    <p id="p4">Ini Paragraf</p>
+
+    <!-- 2. Cara kedua pemberian css (inline HTML) -->
+    <h1 style="color: brown;">Ini Header</h1>
+    <h2 class="header2">Ini Header 2</h2>
 </body>
 </html>
