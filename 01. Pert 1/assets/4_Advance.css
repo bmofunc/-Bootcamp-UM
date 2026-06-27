@@ -1,0 +1,155 @@
+/* 6 Reset CSS */
+* {
+    padding: 0; 
+    margin: 0; 
+    font: unset; 
+}
+
+.board {
+    width: 90%; 
+    /* height: 200px; 
+    overflow: auto; */
+    background: rgb(8, 73, 8);   
+    border: 10px solid orange; 
+    position: relative;
+} 
+
+.board .ball {
+    width: 100px; 
+    height: 100px; 
+    background: red; 
+    border-radius: 50%; 
+    border: 5px solid black;
+    /* Centering Object */
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    position: relative;
+}
+
+.board .ball.ball2 {
+    background-image: url('../assets/catcsgo.webp'); 
+    background-size: cover; 
+    /* Filter (Edit foto / Gambar) Kepakai ngerubah warna */
+    filter: brightness(1) contrast(1) hue-rotate(90deg) invert(1); 
+    position: relative;
+}
+
+.board .ball.ball3 {
+    /* Value X, Y */
+    /* transform: translate(0, -80px); */
+
+    /* Position */
+    /* 3 Position: relative, absolute, fixed */
+    /* 4 Properti Position: Top, left, Bottom, Right */
+
+    position: relative;  /* 1. Default value position */ 
+
+
+    
+    
+    position: absolute;  /* 2. Terbang Berdasarkan parent (harus dikasih position relative) */
+    /* right: 0;  */
+    /* bottom: 0; */
+    /* left: 0;   */
+    /* top: 0;  */
+    background: blue;
+
+    
+
+    position: fixed; /* 3. Terbang tidak mempedulikan apapun (meskipun parentnya dikasih relative) */
+    top: 0; 
+    right: 0;
+    /* right: 0;  */
+    /* bottom: 0;  */
+}
+
+/* 3 Teknik layouting (Float, Flex, Grid) */
+.board2 {
+    margin-top: 20px; 
+    height: 100px; 
+    background: lightblue; 
+    border: 10px solid black;
+    /* Flex berlaku di parent */
+    display: flex; 
+    /* Justify-content, align-items, flex-wrap, gap, flex-direction */
+    justify-content: center; /* Horizontal (flex-start, flex-end,space-between, space-evenly, center) */
+    align-items: center; /* Vertical (flex-start, flex-end, center) */
+    flex-wrap: wrap; /* Kalo udah limit bakal kebawah */
+    gap: 20px; 
+    flex-direction: row-reverse; /* Merubah susunan (column, column-reverse, row, row-reverse) */
+}
+.board2 .rectangle {
+    width: 50px; 
+    height: 50px; 
+    background: brown;
+    border: 1px solid blue; 
+    color: white; 
+    font-size: 40px; 
+    font-weight: bold; 
+    text-align: center;
+
+}
+
+
+/* Studi kasus */
+.container {
+    margin-top: 10px; 
+}
+.container, 
+.container header, 
+.container section, 
+.container footer {
+    border: 1px solid black; 
+}
+
+.container header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 10px; 
+    background: lightblue; 
+} .container .content {
+    padding: 10px; 
+    background: lightyellow; 
+    display: flex; 
+    flex-wrap: wrap; 
+} .container .content .paragraph {
+    display: flex; 
+    flex-direction: row-reverse; 
+}
+
+.container header ul {
+    display: flex; 
+    list-style-type: none;
+    gap: 50px; 
+}
+
+.container footer {
+    background: black; 
+    color: white;
+    text-align: center;
+    padding: 5px;  
+}
+
+
+/* Pembuatan tabel menggunakan css */
+#mytable {
+    display: table; 
+    border-collapse: collapse; 
+}
+#mytable th, 
+#mytable td {
+    border: 1px solid black; 
+    padding: 10px; 
+}
+#mytable th {
+    background: lightcoral; 
+    color: white;  
+}
+
+
+
+/* Reset CSS */
+/* Semua Object */

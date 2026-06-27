@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        /* Untuk Ukuran */
+        /* PX, %, VW, VH */
+
+
+        .p1 {
+            color: red; /* Pemberian Warna */
+            font-size: 40px; /* Pemberian Ukuran */ 
+            font-family: "Roboto", sans-serif;
+            text-decoration: underline;
+            cursor: pointer;
+            /* Buat ketebalan */
+            font-weight: bold;
+            font-style: italic; /* Pemberian garis miring */
+        } .hyperlink1 {
+            color: black; 
+            text-decoration: none;
+        }
+
+        .h1 {
+            font-weight: unset;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: lightblue; 
+            /* background-image: url('./buscemi.jpg');  */
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-image: linear-gradient(to bottom, lightblue, yellow)
+        }
+        .box {
+            /* Pemberian ukuran */
+            width: 50px;
+            height: 50px; 
+            /* Pemberian warna */
+            background: brown;
+            /* Pemberian gambar */
+            background-image: url('./buscemi.jpg'); 
+            /* Pemberian ukuran ke gambar (px, %, cover) */
+            background-size: cover; 
+            /* Pembuatan border */
+            border: 10px solid blue; 
+            /* Pemberian jarak antar element (Margin) */
+            margin-bottom: 50px; 
+            margin-left: 50px; 
+            margin-top: 100px; 
+            margin-right: 100px; 
+
+            /* Singkatan */
+            /* 1 Angka : Dorong atas, kanan, kiri, bawah  */
+            /* 2 Angka : 50px (atas kanan) 0 (Kiri bawah) */
+            /* margin: 50px 0 50px 0;   */
+
+
+        }
+
+        .box2 {
+            width: 200px; 
+            height: 200px; 
+        } .box1 {
+            width: 100px; 
+            height: 100px; 
+        } .dpwa {
+            border-radius: 50%; 
+            width: 150px; 
+            height: 150px; 
+        } .border {
+            border: 10px solid blue; 
+            width: 120px; 
+            height: 120px; 
+        }
+
+        .canvas-custom {
+            width: 400px; 
+            height: 400px; 
+            background: rgba(3, 56, 3, 1);
+            border: 20px solid gold; 
+            /* Untuk menghilangkan objek / pemberian scroll */
+            overflow: auto;
+
+            /* Pemberian ruang pada object */
+            box-sizing: border-box;
+            padding-top: 50px; 
+            padding-left: 50px; 
+            padding-bottom: 50px; 
+            padding-right: 50px; 
+
+            /* Atas, Kanan, Bawah, kiri */
+            /* padding: 50px 50px 50px 50px;  */
+        }
+
+        /* Universal */
+        .ball {
+            border: 2px solid red;
+        }
+
+        /* Mencari ball didalam canvas custom */
+        /* , (dan) */
+        .canvas-custom .wrapper #ball,
+        .canvas-custom .wrapper .ball {
+            width: 70px; 
+            height: 70px; 
+            background-color: rgb(120, 69, 202); 
+            border-radius: 50%; 
+            border: 5px solid black; 
+            margin-top: 20px; 
+
+            /* Ngatur teks ke tengah */
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .canvas-custom #ball {
+            background: lightgreen;
+        }
+
+        /* Mencari ball didalam canvas custom yang punya ball 2 */
+        .canvas-custom .ball.ball2 {
+            background: red; 
+            /* Transform (Untuk menggeser objek) */
+            /* Translate(x, y) */
+            transform: translate(-10px, -10px); 
+        }
+
+        .canvas-custom .ball.ball3 {
+            background: yellow; 
+            /* Transform (Untuk menggeser objek) */
+            /* Rotate (Memutar objek) */
+            transform: rotate(190deg); 
+            border-radius: unset;
+        }
