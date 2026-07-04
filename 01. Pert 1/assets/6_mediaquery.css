@@ -1,0 +1,95 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    font: unset; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --desktop: rgb(85, 85, 12); 
+    --tablet: maroon; 
+    --mobile: rgb(128, 170, 233); 
+    --borderblue: 5px solid blue; 
+}
+
+header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+    /* background: rgb(124, 122, 7);  */
+    background: var(--desktop);
+    /* box-shadow: x y blur color (bayangan) */
+    box-shadow: 3px 3px 10px rgb(37, 41, 5); 
+} header img {
+    width: 50px; 
+    height: auto; 
+    border-radius: 50%; 
+    border: 2px solid white; 
+} header ul {
+    display: flex; 
+    list-style-type: none; 
+    gap: 20px; 
+    transition: all 2s ease 0s; 
+} header ul li {
+    color: white; 
+} header .logo {
+    color: white; 
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
+} header .logo span {
+    font-weight: bold; 
+    font-size: 25px; 
+}
+
+/* Maxwidth 1920px ==> (<= 1920) */
+
+/* Tablet <= 768px */
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: space-evenly; 
+        background-color: var(--tablet); 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+    header .logo {
+        flex-direction: column;
+    }
+}
+/* Mobile */
+/* <= 550px */
+@media screen and (max-width: 550px) {
+    header {
+        background: var(--mobile); 
+    }
+    header ul li, 
+    header .logo {
+        color: black; 
+    }
+
+    header ul {
+        position: fixed; 
+        /* border: 1px solid red;  */
+        bottom: 0; 
+        right: 0; 
+        top: 0; 
+        flex-direction: column;
+        padding: 20px; 
+        background: rgb(26, 116, 146); 
+        top: 110px; 
+        z-index: -1; 
+        /* right: -100%;  */
+        box-shadow: -5px -5px 5px black;
+    }
+    header ul li {
+        color: white; 
+    }
+}
+
+/* <= 350px */
+@media screen and (max-width: 350px) {
+    * {
+        display:none;
+    }
+}

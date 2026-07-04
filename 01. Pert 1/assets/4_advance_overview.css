@@ -1,0 +1,112 @@
+div.board {
+    width: 700px; 
+    /* height: 400px;  */
+    background: rgb(11, 44, 11);
+    border: 10px solid orange; 
+    position: relative; 
+}
+
+div.board div.ball {
+    width:200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    background: red; 
+
+    /* Auto (centering secara horizontal) */
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+div.board div.ball.ball2 {
+    background-image: url('../assets/buscemi.jpg'); 
+    background-size: cover; 
+    /* Buat Edit Foto */
+    filter: 
+        brightness(1) 
+        contrast(1) 
+        invert(0) 
+        hue-rotate(180deg) 
+        blur(0);
+}
+
+div.board div.ball.ball3 {
+    background-image: url('../assets/catcsgo.webp');
+    background-size: cover; 
+
+    /* Position (Relative, Absolute, Fixed) */
+
+    position: absolute; /* terbang */ 
+    
+    /* Support Property untuk position */
+    /* Bottom, Right, Top, Left */
+    /* top: 0;  */
+    /* right: 0;  */
+    /* left: 0; */
+    /* bottom: 0;   */
+
+    /* position: fixed; /* Terbang ke body tidak peduli sama parent */
+    bottom: 0; 
+}
+
+.board2 {
+    margin-top: 20px; 
+    padding: 20px; 
+    display: flex; 
+    height: 200px; 
+
+    /* Susun secara horizontal  */
+    /* Justify-content: center, space-between, space-evenly, flex-end, flex-start */
+    justify-content: flex-start; 
+    gap: 10px; /* jarak antar elemen */ 
+
+    /* Susun secara vertical */
+    /* align-items: center, flex-end, flex-start */
+    align-items: flex-start; 
+
+    /* Perubahan arah object (row, row-reverse, column, column-reverse) */
+    /* flex-direction: column;  */
+
+    /* Ketika udah limit dia bikin space baru */
+    flex-wrap: wrap; /* nowrap, wrap */ 
+    
+
+}
+
+.board2 .rectangle {
+    width: 40px; 
+    height: 40px; 
+    background: lightblue; 
+}
+
+
+.container {
+    border: 1px solid black; 
+}
+.container header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background-color: lightyellow; 
+    border: 1px solid;
+    padding: 5px 10px; 
+}
+
+.container header ul {
+    display: flex; 
+    list-style-type: none; 
+    gap: 20px; 
+}
+
+.container .content {
+    /* display: flex;  */
+    padding: 20px; 
+} 
+
+.container .wrapper.wp1 {
+    display: flex; 
+    gap: 10px; 
+}
+.container .wrapper.wp2 {
+    display: flex; 
+    gap: 20px; 
+}
