@@ -59,10 +59,11 @@ let vari_5 = [75, 'B', "Deni", false, "Dena"];        // array
 // Index Array Position dimulai dari 0 --> [0,1,2,3,4]
 
 let vari_6 = {nama: "tom", umur: 19, npm: 36} // object {key: value}
-let vari_7 = [
-    {nama: 'deni', umur: 20},
+let vari_7 = [ // Array
+    {nama: 'deni', umur: 20}, // Object
     {nama: 'dena', umur: 22},
-] // JSON
+];
+// JSON (Javascript object notation)
 
 
 // Cara pangggil sebuah variable
@@ -75,6 +76,7 @@ let vari_7 = [
 // console.log(vari_5[2]); // cara pemanggilan array (menggunakan index)
 // console.log(vari_6); 
 // console.log(vari_6.umur); // cara pemanggilan object menggunakan key 
+// console.log(vari_7[1].umur); // Cara pemanggilan JSON 
 // ========================================= CARA PEMANGGILAN VARIABLE
 
 
@@ -99,7 +101,7 @@ let namaMahasiswa1 = "Jono andriani putra";
 let bil1 = 5; 
 let bil2 = 10; 
 let result = bil1 + bil2; 
-console.log(result); // 15
+// console.log(result); // 15
 
 let bil3 = "5"; 
 let bil4 = 10;
@@ -108,6 +110,321 @@ let bil5 = "19.5";
     // bil4 = String(bil4); 
     bil5 = parseFloat(bil5);
 let result2 = bil3 + bil4 + bil5; 
-console.log(result2); // 15
+// console.log(result2); // 15
 
 // Built in function array, object, JSON (array object)
+let arrs_1 = ["apel","jeruk","anggur"];
+
+// Array 
+// Push, pop, shift, Length, ||  (foreach, findIndex, find, map, sort) 
+arrs_1.push(10); // Push (menambah objek baru di akhir index array) 
+arrs_1.push(14); 
+arrs_1.pop();    // Pop (Menghapus objek baru di akhir index array)
+arrs_1.pop();
+arrs_1.shift();  // Shift (buat menghapus objek baru di awal index array)
+arrs_1.push(15); 
+let panjangArray = arrs_1.length; 
+// console.log(arrs_1); 
+// console.log(panjangArray); 
+
+// Object 
+let objs_2 = {nama: "tom", umur: 19, npm: 36} // object {key: value}
+// console.log(objs_2); 
+const listKey = Object.keys(objs_2); 
+const listVal = Object.values(objs_2); 
+// console.log(listKey); 
+// console.log(listVal); 
+// listVal.forEach(item => console.log(item)); 
+// console.log(typeof("bimo")); 
+
+
+// Destructuring (Object / Array)
+const {nama, umur, npm} = objs_2; 
+// console.log(nama)
+
+
+let arrs_2 = ["apel","jeruk","anggur"];
+const [buah1, buah2, buah3] = arrs_2; 
+// console.log(buah1); 
+// console.log(buah2); 
+// console.log(buah3); 
+// ======================================================================
+
+// IF ELSE 
+// OR  (||) AND (&&)
+// OR   = Kondisi apabila salah satunya benar = TRUE 
+// AND  = Kondisi semuanya harus benar        = TRUE
+
+// OR   --- TRUE || FALSE || false || false ===> TRUE 
+// AND  --- TRUE && FALSE && TRUE           ===> FALSE
+
+// ==   --  SAMA DENGAN 
+// !=   --  TIDAK SAMA DENGAN 
+//  <   --  KURANG DARI 
+// <=   --  KURANG DARI SAMA DENGAN
+// >    --  KURANG DARI SAMA DENGAN
+// >=   --  KURANG DARI SAMA DENGAN
+
+let buah5 = "jeruk";
+let buah6 = "jeruk";  
+let numb5 = 50; 
+let numb6 = 100; 
+
+// Case 1
+// if(buah5 == buah6) { // benar
+//     console.log(buah5 + " Sama dengan " + buah6);  
+// } else {
+//     console.log(buah5 + " Tidak Sama dengan " + buah6); 
+// }
+
+// Case 2 (OR)
+// KONDISI PERTAMA = TRUE 
+// KONDISI KEDUA   = FALSE 
+// TRUE
+// if(buah5 == buah6 || numb5 > numb6) { // benar
+//     console.log("OR BENER NIH"); 
+// } else {
+//     console.log("OR SALAH NIH"); 
+// }
+
+// // Case 3 (AND)
+// // KONDISI PERTAMA = TRUE 
+// // KONDISI KEDUA   = FALSE 
+// // FALSE
+// if(buah5 == buah6 && numb5 > numb6) { // benar
+//     console.log("AND BENER NIH"); 
+// } else {
+//     console.log("AND SALAH NIH"); //
+// }
+
+
+// // CASE 4 (if else)
+// let nilaiMhs = 60; 
+// let grade = "";
+
+// if(nilaiMhs >= 0 && nilaiMhs <= 50) { // true, false  => FALSE
+//     grade = "C"; 
+// } else if(nilaiMhs >= 51 && nilaiMhs <= 70) { // true, true => TRUE
+//     grade = "B"; 
+// } else {
+//     grade = "A"; 
+// }
+
+// // Alternatif selain if else 
+// switch(nilaiMhs) {
+//     case 60: {
+//         grade = "C"; 
+//         break; // selesain
+//     }
+//     case 50: {
+//         grade = "B"; 
+//         break;
+//     }
+// }
+
+// console.log(grade); 
+
+
+// let increment = 0; 
+// increment++; // 1
+// increment++; // 2
+// increment++; // 3
+// console.log(increment); 
+
+// FOR LOOP 
+// for(let i=0; i<=5; i++) {
+//     console.log(i); // 0 1 2 3 4
+// }
+
+// for(let i=0; i<=50000; i++) {
+//     if(i == 3) {
+//         console.log("AKU ADA DI 3")
+//         break; 
+//     } else {
+//         console.log("AKU GA MASUK KRITERIA"); 
+//     }
+// }
+
+// WHILE LOOP 
+// let cond1 = true; 
+// let muterLapangan = 0; 
+
+// // while itu akan dijalanin selama kondisinya TRUE 
+// while(cond1) { 
+//     muterLapangan++; // 1 2 3
+//     if(muterLapangan == 3) cond1 = false; 
+
+//     console.log(muterLapangan); 
+// }
+
+// FUNCTION (kumpulan proses dalam 1)
+
+// case 1
+function kalkulator() {
+    console.log("Halo kalkulator")
+    console.log("=")
+    console.log("==============")
+    console.log("==============\n")
+}
+// kalkulator(); 
+
+// case 2
+function kalkulator2(n1, n2) {
+    console.log("nilai 1: " + n1);
+    console.log("nilai 2: " + n2);
+    let result = n1 + n2; 
+    console.log("Result: " + result); 
+}
+// kalkulator2(19, 20);
+
+// case 3 Return 
+function masak(adonan) {
+    let result = ""; 
+    if(adonan == "telur") {
+        result = "DONAT"; 
+    } else if(adonan == "tepung") {
+        result = "PISANG"; 
+    }
+    
+    return result; // dibalikin / dianterin lagi hasil jadinya
+} 
+// let res = masak("telur"); 
+// console.log(res);
+// console.log(masak("tepung")); 
+
+
+// ARROW FUNCTION
+const pertambahan1 = () => {
+
+}
+
+// basic function / function biasa
+function pertambahan2() {
+
+}
+
+// arrow function 
+const infoUM = () => {
+    console.log("INFO UM")
+    console.log("=")
+    console.log("=")
+    console.log("=========")
+}
+
+const namaMahasiswa = (nama, umur) => {
+    console.log(nama)
+    console.log(umur)
+}
+
+const masak2 = (adonan) => {
+    return "KUE"; 
+}
+
+
+
+// infoUM(); 
+// namaMahasiswa("Jesi", 19); 
+// console.log(masak2("TEPUNG")); 
+
+
+// ARRAY (foreach, findIndex, find, filter, map, sort)
+
+
+let students = ["Dina", "Indra", "Maulidya", "Yupi", "Maulidya"]; // start dari index 0
+
+// For loop / Foreach Untuk Menampilkan data didalam array 
+// cara tampilin menggunakan for loop 
+// for(let i=0; i<students.length; i++) {
+//     console.log(students[i])
+// }
+
+// // while loop 
+
+
+// // 1. Cara 1
+// students.forEach(item => {
+//     console.log(item)
+// })
+
+// // 2. Cara 2
+// const tampil = (nama) => {
+//     console.log(nama)
+// }
+// students.forEach(item => tampil(item))
+
+// find Index (buat mencari nilai index dari suatu value)
+// let indexBerapa = students.findIndex(item => item == "Yupi"); 
+// console.log(indexBerapa)
+
+// // find (untu mencari sebuah data tapi hanya mengembalikan 1 nilai (partial scan))
+// let dataBerapa = students.find(item => item == "Maulidya"); 
+// console.log(dataBerapa)
+// if(dataBerapa != undefined) {
+//     console.log("data nya ada"); 
+// } else {
+//     console.log("data nya tidak ada"); 
+// }
+
+// // filter (untuk mencari semua data dalam 1 array (full scan))
+// let datasBerapa = students.filter(item => item == "Maulidya"); 
+// console.log(datasBerapa); 
+
+// // Map (sama  kaya foreach cuman dia bisa memodifikasi sebuah nilai)
+// let libNumber1 = [50,1,15,8,7]; 
+// let libNumber2 = [50,1,15,8,7]; 
+// let resultsNumb = libNumber1.map(item => {
+//     let result = item * 5; 
+//     return result 
+// })
+
+// console.log(resultsNumb)
+
+// // Sort (untuk mengurutkan sebuah data dari yg terkecil sampai yang terbesar)
+// let resultSort1 = libNumber1.sort((a,b) => a-b); // ascending
+// let resultSort2 = libNumber2.sort((a,b) => b-a); // dessending
+// console.log(resultSort1); 
+// console.log(resultSort2); 
+
+// let api_data = [
+//     {nama: 'jono', umur: 19, kampus: 'um'},
+//     {nama: 'maulidya', umur: 22, kampus: 'um'},
+//     {nama: 'indra', umur: 23, kampus: 'um'},
+// ]
+// // console.log(api_data);
+// api_data.forEach(item => {
+//     let nama = item.nama; 
+//     let umur = item.umur; 
+//     let kampus = item.kampus; 
+//     console.log(nama); 
+//     console.log(umur); 
+//     console.log(kampus); 
+// })
+
+
+
+// TRY CATCH (buat menangkan sebuah error / exception)
+try {
+    let i = undefined; 
+    let v = 2; 
+    let r = i/v; 
+    console.log(test); // error 
+} catch(ex) {
+    console.log("ada error")
+}
+
+// Codingan
+console.log("test"); 
+
+
+// CLASS
+class Card {
+    getCardName() {
+        console.log("Menammpilkan kartu")
+    }
+}
+
+const kartu1 = new Card(); 
+console.log(kartu1.getCardName()); 
+
+
+// DOM (Website)
