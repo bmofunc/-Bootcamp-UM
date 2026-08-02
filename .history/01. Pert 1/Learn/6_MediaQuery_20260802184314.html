@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/6_mediaquery.css">
+</head>
+<body>
+    <header>
+        <div class="logo" name="test">
+            <img src="../assets/catcsgo.webp">
+            <span>Buscemi</span>
+        </div>
+        <ul name="test">
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+        </ul>
+
+        <input type="radio" name="nani" val="x">
+        <input type="radio" name="nani" val="y" checked>
+    </header>
+    <script>
+        let x = document.getElementsByName('test'); 
+        for(let i=0; i<x.length; i++) {
+            x[i].classList.add('nani'); 
+        }
+
+    </script>
+</body>
+</html>

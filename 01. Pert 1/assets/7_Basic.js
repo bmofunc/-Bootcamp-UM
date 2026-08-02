@@ -82,12 +82,12 @@ let vari_7 = [ // Array
 
 
 // Built in function (String)
-let namaKampus    = "Universitas Mandiri"; 
-    namaKampus    = namaKampus.replace("Mandiri", "Sendiri");  // buat ngereplace kata
-let validasi      = namaKampus.includes('Jono'); // nyari tau ada ga kata di variable tersebut
-let namaMahasiswa1 = "Jono andriani putra"; 
-    namaMahasiswa2 = namaMahasiswa1.split(' '); 
-    namaMahasiswa3 = namaMahasiswa2[1]; 
+// let namaKampus    = "Universitas Mandiri"; 
+//     namaKampus    = namaKampus.replace("Mandiri", "Sendiri");  // buat ngereplace kata
+// let validasi      = namaKampus.includes('Jono'); // nyari tau ada ga kata di variable tersebut
+// let namaMahasiswa1 = "Jono andriani putra"; 
+//     namaMahasiswa2 = namaMahasiswa1.split(' '); 
+//     namaMahasiswa3 = namaMahasiswa2[1]; 
 
 // console.log(namaKampus); 
 // console.log(validasi); 
@@ -327,7 +327,7 @@ const masak2 = (adonan) => {
 // console.log(masak2("TEPUNG")); 
 
 
-// ARRAY (foreach, findIndex, find, filter, map, sort)
+// ARRAY (foreach, findIndex, find, filter, map, sort, reduce)
 
 
 let students = ["Dina", "Indra", "Maulidya", "Yupi", "Maulidya"]; // start dari index 0
@@ -338,19 +338,33 @@ let students = ["Dina", "Indra", "Maulidya", "Yupi", "Maulidya"]; // start dari 
 //     console.log(students[i])
 // }
 
-// // while loop 
+// while loop 
+
+
 
 
 // // 1. Cara 1
-// students.forEach(item => {
-//     console.log(item)
+// students.forEach((val) => {
+//     // console.log(ind)
+//     console.log(val)
 // })
+// console.log("\n"); 
 
-// // 2. Cara 2
+
+// // // 2. Cara 2
 // const tampil = (nama) => {
 //     console.log(nama)
 // }
 // students.forEach(item => tampil(item))
+
+// console.log("\n"); 
+
+// function tampil2(nama) {
+//     console.log(nama)
+// }
+// students.forEach(item => tampil2(item)); 
+
+
 
 // find Index (buat mencari nilai index dari suatu value)
 // let indexBerapa = students.findIndex(item => item == "Yupi"); 
@@ -401,30 +415,103 @@ let students = ["Dina", "Indra", "Maulidya", "Yupi", "Maulidya"]; // start dari 
 // })
 
 
+// Reduce 
+// let listNumber = [5,10,15]; 
+// console.log(listNumber); 
+// let summary = listNumber.reduce((initvar, item) => initvar + item, 0);  // initvar = 0
+// console.log(summary); 
+
+// Loop 1 
+// Init_var = 0 
+// item     = 5 
+// Result   = 0 + 5 = 5
+
+// Loop 2
+// Init_var = 5
+// item     = 10
+// Result   = 5 + 10 = 15; 
+
+
+// Loop 3
+// Init_var = 15
+// item     = 15
+// Result   = 30; 
+
+
+
+
 
 // TRY CATCH (buat menangkan sebuah error / exception)
-try {
-    let i = undefined; 
-    let v = 2; 
-    let r = i/v; 
-    console.log(test); // error 
-} catch(ex) {
-    console.log("ada error")
+// try {
+//     let i = undefined; 
+//     let v = 2; 
+//     let r = i/v; 
+//     console.log(test); // error 
+// } catch(ex) {
+//     console.log("ada error")
+// }
+
+// // Codingan
+// console.log("test"); 
+
+
+// // CLASS
+// class Card {
+//     getCardName() {
+//         console.log("Menammpilkan kartu")
+//     }
+// }
+
+// const kartu1 = new Card(); 
+// console.log(kartu1.getCardName()); 
+
+
+
+// Rest Parameter (...)
+// function universitas(nama, tahun, ...mahasiswas) {
+//     console.log(nama)
+//     console.log(tahun)
+//     console.log(mahasiswas); 
+//     // mahasiswas.forEach(item => console.log(item))
+//     // let results = mahasiswas.map(item => item * 5); 
+//     // console.log(results); 
+// }
+// universitas("universitas mandiri", 1990, 1,2,3,4,5,6,7,8,910, 11,12, 13,1000, 2000)
+
+
+
+
+// Fetch Async Await
+
+
+
+async function getDataApi() {
+    const response = await fetch('https://api.tvmaze.com/singlesearch/shows?q=girls')
+    if(response.status == 200) {
+        const json = response.json(); 
+        return json
+    } 
+    return undefined; 
 }
 
-// Codingan
-console.log("test"); 
+let apiData = await getDataApi(); 
+console.log(apiData)
+let id = apiData.id; 
+let name = apiData.name; 
+let languange = apiData.languange; 
+let network = apiData.network; 
+console.log(id)
+console.log(name)
+console.log(network)
+console.log(languange)
+
+// let apidata = await getDataApi(); 
+// console.log(apidata); 
 
 
-// CLASS
-class Card {
-    getCardName() {
-        console.log("Menammpilkan kartu")
-    }
-}
 
-const kartu1 = new Card(); 
-console.log(kartu1.getCardName()); 
+
+
 
 
 // DOM (Website)
