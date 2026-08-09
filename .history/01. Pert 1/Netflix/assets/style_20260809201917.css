@@ -1,0 +1,149 @@
+/* Reset */
+* {
+    margin: unset; 
+    padding: unset; 
+    font: unset; 
+    box-sizing: border-box; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body {
+    background-color: black;
+    background-image: url('./background.png');
+    background-size:cover;  
+}
+
+:root {
+    /* --debugborder: unset; */
+    --debugborder: 1px solid red; 
+    --debugborder2: 1px solid yellow; 
+}
+
+/* ============================== Header */
+header {
+    /* Debugging */
+    border: var(--debugborder);    
+    display:flex; 
+    justify-content: space-between; 
+    align-items:center; 
+    height: 68px; 
+    padding-left: 30px; 
+    padding-right: 30px; 
+}
+
+header .logos {
+    border: var(--debugborder);
+    display:flex; 
+    gap: 20px; 
+}
+
+header a {
+     border: var(--debugborder);
+     text-decoration: unset; 
+     color:white; 
+} 
+
+header .logo {
+    font-size: 25px; 
+    font-weight:bold; 
+    color: red; 
+}
+
+header ul {
+    display: flex; 
+    list-style-type:none;
+    gap: 25px; 
+    align-items:center;
+}
+
+header button {
+    background-color: red;
+    border: unset; 
+    color:white; 
+    padding: 5px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    border-radius: 7px; 
+}
+/*  =============================== End Of Header */
+
+
+
+
+/* Footer */
+footer {
+    color: white; 
+    border: var(--debugborder); 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    padding: 50px; 
+    /* RGBA -> (Opacity 0 - 1)  */
+    background: rgba(0,0,0, 0.5); 
+}
+
+footer h1 {
+    color: red; 
+    font-size: 30px; 
+    font-weight: bold; 
+}
+footer p {
+    font-size: 14px; 
+}
+
+footer .sosmed-icon {
+    border: var(--debugborder); 
+    display:flex; 
+    gap: 20px; 
+}
+
+footer .sosmed-icon svg {
+    border: var(--debugborder); 
+}
+
+.footer-information {
+    display:flex; 
+    flex-direction: column;
+    gap: 15px; 
+    border: var(--debugborder); 
+    width: 600px; 
+} 
+/* ====================================== End of footer */
+
+/* Section Content */
+section.content {
+    border: var(--debugborder2); 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+section.content .popuplogin {
+    border: var(--debugborder2); 
+    width: 500px; 
+    padding: 30px; 
+    background-color: rgba(0,0,0, 0.5);
+    display: flex;
+    flex-direction: column; 
+    gap: 25px; 
+}
+
+section.content .popuplogin h3 {
+    font-size: 30px; 
+}
+
+section.content .popuplogin .inputs {
+    display: flex; 
+    flex-direction: column;
+    gap: 20px; 
+}
+
+section.content .popuplogin .inputs input {
+    background: black; 
+    padding: 10px; 
+    border: unset; 
+    border: 1px solid gray; 
+    border-radius: 5px; 
+}

@@ -1,0 +1,17 @@
+/* Reset */
+* {
+    margin: unset; 
+    padding: unset; 
+    font: unset; 
+    box-sizing: border-box; 
+}
+
+:root {
+    --debugborder: 1px solid red; 
+}
+
+header {
+    /* Debugging */
+    border: var(--debugborder);    
+    display:flex; 
+}

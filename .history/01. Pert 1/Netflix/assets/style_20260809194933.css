@@ -1,0 +1,39 @@
+/* Reset */
+* {
+    margin: unset; 
+    padding: unset; 
+    font: unset; 
+    box-sizing: border-box; 
+}
+
+:root {
+    --debugborder: 1px solid red; 
+}
+
+header {
+    /* Debugging */
+    border: var(--debugborder);    
+    display:flex; 
+    justify-content: space-between; 
+    align-items:center; 
+    height: 68px; 
+    padding-left: 30px; 
+    padding-right: 30px; 
+}
+
+header .logos {
+    border: var(--debugborder);
+    display:flex; 
+    gap: 20px; 
+}
+
+header a {
+     border: var(--debugborder);
+} 
+
+header ul {
+    display: flex; 
+    list-style-type:none;
+    gap: 25px; 
+}
+

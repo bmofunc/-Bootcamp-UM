@@ -1,0 +1,15 @@
+/* Reset */
+* {
+    margin: unset; 
+    padding: unset; 
+    font: unset; 
+    box-sizing: border-box; 
+}
+
+:root {
+    --
+}
+
+header {
+    border: 1px solid red;    
+}
