@@ -20,7 +20,7 @@ i_login.addEventListener('click', function(e) {
 
     // ADMIN
     if(ius == "ADMIN" && ips == "ADMIN1234") {
-        window.location = "./dashboard.html"
+        window.location = "../dashboard.html"
         alert("Login Berhasil");
     } 
     // USER 

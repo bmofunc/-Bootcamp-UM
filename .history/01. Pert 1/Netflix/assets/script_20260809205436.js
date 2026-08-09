@@ -9,24 +9,18 @@ console.log(i_password)
 console.log(i_login)
 
 
-const loginForm = document.querySelector('form');
-loginForm.addEventListener('submit', function(e) {
-    e.preventDefault(); 
-});
-
 i_login.addEventListener('click', function(e) {
     let ius = i_username.value; 
     let ips = i_password.value; 
 
     // ADMIN
     if(ius == "ADMIN" && ips == "ADMIN1234") {
-        window.location = "./dashboard.html"
+        // window.location.href = "file:///C:/Users/user/Desktop/Bootcamp%20UM%202026/-Bootcamp-UM/01.%20Pert%201/Netflix/dashboard.html"; 
+        // window.location = "../dashboard.html"
         alert("Login Berhasil");
     } 
     // USER 
-    else if(ius == "USEr" && ips == "USER1234") {
-
-    }
+    else if(ius == "ADMIN" && ips == "ADMIN1234") {
     else {
         alert("Username/Password Invalid");
     }

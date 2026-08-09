@@ -9,18 +9,13 @@ console.log(i_password)
 console.log(i_login)
 
 
-const loginForm = document.querySelector('form');
-loginForm.addEventListener('submit', function(e) {
-    e.preventDefault(); 
-});
-
 i_login.addEventListener('click', function(e) {
     let ius = i_username.value; 
     let ips = i_password.value; 
 
     // ADMIN
     if(ius == "ADMIN" && ips == "ADMIN1234") {
-        window.location = "./dashboard.html"
+        window.location = "../dashboard.html"
         alert("Login Berhasil");
     } 
     // USER 

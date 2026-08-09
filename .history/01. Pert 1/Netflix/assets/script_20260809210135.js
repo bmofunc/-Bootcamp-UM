@@ -10,8 +10,9 @@ console.log(i_login)
 
 
 const loginForm = document.querySelector('form');
+
 loginForm.addEventListener('submit', function(e) {
-    e.preventDefault(); 
+    e.preventDefault(); // Mencegah reload form
 });
 
 i_login.addEventListener('click', function(e) {
@@ -20,7 +21,7 @@ i_login.addEventListener('click', function(e) {
 
     // ADMIN
     if(ius == "ADMIN" && ips == "ADMIN1234") {
-        window.location = "./dashboard.html"
+        window.location = "../dashboard.html"
         alert("Login Berhasil");
     } 
     // USER 
