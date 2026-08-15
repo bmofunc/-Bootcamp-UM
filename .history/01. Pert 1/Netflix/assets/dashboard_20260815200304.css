@@ -1,0 +1,20 @@
+body {
+    background: url('./dashboard.svg'); 
+}
+
+:root {
+    --debugborder: unset;
+    --debugborder: 1px solid red; 
+    --debugborder2: 1px solid yellow; 
+}
+
+.movies-hero {
+    border: var(--debugborder);
+}
+
+.movies-hero .movies-hero-detail {
+    border: 1px solid blue; 
+    color:white; 
+    width: 500px; 
+
+}

@@ -1,0 +1,34 @@
+// alert("Helo")
+const i_username = document.querySelector('.c_username'); 
+const i_password = document.querySelector('.c_password'); 
+const i_login = document.querySelector('.c_login'); 
+
+const i_form  = document.querySelector('form'); 
+console.log(i_form)
+
+console.log(i_username)
+console.log(i_password)
+console.log(i_login)
+
+i_form.addEventListener('submit', function(e) {
+    e.preventDefault(); 
+})
+
+
+
+i_login.addEventListener('click', function(e) {
+    let ius = i_username.value; 
+    let ips = i_password.value; 
+
+    // ADMIN
+    if(ius == "ADMIN" && ips == "ADMIN1234") {
+        window.location = "./dashboard.html"
+    } 
+    // USER 
+    else if(ius == "USEr" && ips == "USER1234") {
+
+    }
+    else {
+        alert("Username/Password Invalid");
+    }
+})

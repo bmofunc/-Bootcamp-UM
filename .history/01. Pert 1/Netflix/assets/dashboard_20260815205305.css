@@ -1,0 +1,149 @@
+body {
+    background: url('./dashboard.svg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+:root {
+    --debugborder: unset;
+    /* --debugborder: 1px solid red;  */
+    /* --debugborder2: 1px solid yellow;  */
+}
+
+.movies-hero {
+    border: var(--debugborder);
+    padding: 50px; 
+}
+
+.movies-hero .movies-hero-detail {
+    border: var(--debugborder);
+    color:white; 
+    width: 500px; 
+    display:flex; 
+    flex-direction: column;
+    gap: 15px; 
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+
+.movies-hero .movies-hero-detail h1 {
+    font-size: 40px; 
+    font-weight: bold;
+}
+
+.movies-hero .movies-hero-detail p {
+    font-size: 16px; 
+    line-height: 1.5;
+}
+
+.movies-hero .movies-hero-detail button {
+    background: white; 
+    font-size: 16px;
+    display: flex; 
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    gap: 8px; 
+    border-radius: 8px;
+    width: 100px;
+    text-align: center;
+    justify-content:center;
+}
+
+.movies-hero .movies-hero-detail svg {
+    width: 14px; 
+    height: auto; 
+}
+
+
+/* ======================== MOVIES LIST */
+.movies-list {
+    border: var(--debugborder); 
+    color:white; 
+    padding: 20px; 
+}
+
+.swiper {
+  border: var(--debugborder);
+  /* width: 600px; */
+  height: 200px;
+}
+
+.swiper-slide {
+    border: var(--debugborder);
+}
+
+.movie-card {
+    border: var(--debugborder);
+    height: 100%; 
+    background-image:url('./moviecard_img.svg');
+    background-size:cover; 
+    background-repeat: no-repeat; 
+}
+
+.movie-card span.topten {
+    background: red;
+    position: absolute; 
+    right: 0; 
+    font-size: 20px; 
+    padding: 5px;
+    text-align: center;
+    font-weight: bold; 
+    padding-bottom: 20px;
+    border-bottom-left-radius: 30px;
+}
+.movie-card span.recents {
+    background: red; 
+    color:white; 
+    position:absolute;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+    text-align:center;
+    width: 150px;
+}
+
+
+.popup-movies {
+    border: 1px solid red;
+    width: 55%;
+    position: fixed; 
+    margin: auto; 
+    left: 0; 
+    right: 0; 
+    background: white; 
+}
+
+.popup-movies .detail {
+    border: 1px solid red;
+    height: 400px; 
+    display:flex; 
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: flex-start;
+    padding: 30px; 
+}
+
+.popup-movies .detail h1 {
+    font-size: 40px;
+    font-weight: bold;  
+}
+
+.popup-movies .detail button {
+    background: white; 
+    padding: 10px; 
+    font-size: 16px; 
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
+    width: 150px;
+}
+.popup-movies .detail svg {
+    width: 14px; 
+    height: auto; 
+}
+
+

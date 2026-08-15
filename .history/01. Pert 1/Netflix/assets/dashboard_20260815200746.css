@@ -1,0 +1,56 @@
+body {
+    background: url('./dashboard.svg'); 
+}
+
+:root {
+    --debugborder: unset;
+    /* --debugborder: 1px solid red;  */
+    /* --debugborder2: 1px solid yellow;  */
+}
+
+.movies-hero {
+    border: var(--debugborder);
+    padding: 25px; 
+}
+
+.movies-hero .movies-hero-detail {
+    border: var(--debugborder);
+    color:white; 
+    width: 500px; 
+    display:flex; 
+    flex-direction: column;
+    gap: 15px; 
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+
+.movies-hero .movies-hero-detail h1 {
+    font-size: 40px; 
+    font-weight: bold;
+}
+
+.movies-hero .movies-hero-detail p {
+    font-size: 16px; 
+    line-height: 1.5;
+}
+
+.movies-hero .movies-hero-detail button {
+    background: white; 
+    font-size: 16px;
+    display: flex; 
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    gap: 8px; 
+    border-radius: 8px;
+    width: 100px;
+    text-align: center;
+    justify-content:center;
+}
+
+.movies-hero .movies-hero-detail svg {
+    width: 14px; 
+    height: auto; 
+}

@@ -1,0 +1,11 @@
+body {
+    background: url('./dashboard.svg'); 
+}
+
+.movies-hero {
+    border: 1px solid red; 
+}
+
+.movies-hero .movies-hero-detail {
+    border: 1px solid blue; 
+}

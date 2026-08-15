@@ -1,0 +1,50 @@
+const moviesCardList = () => {
+    return `<div class="swiper-slide">
+                        <div class="movie-card">
+                            <span class="topten">
+                                TOP <br> 10
+                            </span>
+                            <span class="recents">Recently Added</span>
+                        </div>
+                    </div>`; 
+}
+
+
+const moviesContainer = document.getElementById('moviesContainer'); 
+let elements = ""; 
+
+for(let i=0; i<10; i++) {
+  elements = elements + moviesCardList();  
+}
+console.log(elements)
+
+moviesContainer.insertAdjacentHTML('afterbegin', ); 
+
+
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 6, 
+  spaceBetween: 30, 
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  autoplay: {
+    delay: 2000,
+  },
+});
