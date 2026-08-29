@@ -66,19 +66,12 @@ document.addEventListener('click', async function(e) { // input
         let title = detail_film.name; 
         let description = detail_film.summary; 
         let image = detail_film.image.original; 
+
+        console.log(title, description, image); 
         
         // memperkecil ruang lingkup 
         let popup_judul = popupmovies.querySelector('h1'); 
-        let popup_description = popupmovies.querySelector('.descriptions p'); 
-        let popup_detail = popupmovies.querySelector('.detail'); 
-
-        console.log(popup_judul); 
-        console.log(popup_description); 
-        console.log(popup_detail); 
-
-        popup_judul.innerHTML = title; 
-        popup_description.innerHTML = description; 
-        popup_detail.style.background = `url('${image}')`;
+        popup_judul.innerHTML = detail_film.name; 
     }
 
 })
@@ -124,7 +117,6 @@ video.addEventListener('timeupdate', function(e) {
     let duration = video.duration; 
     let percenta = (currTime/duration) * 100; 
     progress.style.background = `linear-gradient(to right, red ${percenta}%, silver 0%)`; 
-    progress.value = percenta; 
     timer.innerHTML = `${formatDetik(currTime)} / ${formatDetik(duration)}`; 
 })
 

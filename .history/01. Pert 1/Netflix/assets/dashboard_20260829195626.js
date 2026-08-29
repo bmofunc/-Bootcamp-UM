@@ -78,7 +78,7 @@ document.addEventListener('click', async function(e) { // input
 
         popup_judul.innerHTML = title; 
         popup_description.innerHTML = description; 
-        popup_detail.style.background = `url('${image}')`;
+        image.style.background = `url('')`
     }
 
 })
@@ -124,7 +124,6 @@ video.addEventListener('timeupdate', function(e) {
     let duration = video.duration; 
     let percenta = (currTime/duration) * 100; 
     progress.style.background = `linear-gradient(to right, red ${percenta}%, silver 0%)`; 
-    progress.value = percenta; 
     timer.innerHTML = `${formatDetik(currTime)} / ${formatDetik(duration)}`; 
 })
 

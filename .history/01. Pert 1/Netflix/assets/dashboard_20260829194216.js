@@ -16,7 +16,6 @@ const moviesCardList = (isdetailshow) => {
 const moviesCardList2 = (dataapi) => {
     // console.log(dataapi)
     let judul = dataapi.show.name; 
-    let id     = dataapi.show.id; 
     let topten = "";
     if(dataapi.show.network) {
         topten = `<span class="topten">${dataapi.show.network.name}</span>`;
@@ -24,7 +23,7 @@ const moviesCardList2 = (dataapi) => {
 
     let gambar = dataapi.show.image.medium; 
   
-  return `<div class="swiper-slide" data-idfilmku="${id}">
+  return `<div class="swiper-slide">
                         <div class="movie-card" style="background-image:url('${gambar}')">
                             ${topten}
                             <span class="recents">Recently Added</span>
@@ -41,44 +40,25 @@ let elements = "";
 
  
 const closepopupmovies = document.querySelector('#closepopupmovies'); 
-// const cardMovies    = document.querySelectorAll('.swiper-slide')
+const cardMovies    = document.querySelectorAll('.swiper-slide')
 const popupmovies    = document.querySelector('.popup-movies')
 
-// cardMovies.forEach(item => {
-//   item.addEventListener('click', function(e) {
-//     //   console.log("Kamu mencet card"); 
-//       // menampilkan popup 
-//       popupmovies.classList.remove('hide'); 
-//   })
-// })
+cardMovies.forEach(item => {
+  item.addEventListener('click', function(e) {
+    //   console.log("Kamu mencet card"); 
+      // menampilkan popup 
+      popupmovies.classList.remove('hide'); 
+  })
+})
 
-
-// Event Bubbling  (element yg membutuhkan pengambilan data yg cukup lama)
-document.addEventListener('click', async function(e) { // input 
+// Event Bubbling 
+document.addEventListener('click', function(e) {
     // console.log("kesini"); 
     let element = e.target; 
     console.log(element)
-    if(element.classList.contains('swiper-slide')) {
-        popupmovies.classList.remove('hide'); 
-        let id = element.dataset.idfilmku; 
-        let link = `https://api.tvmaze.com/shows/${id}`;     
-        let detail_film = await getDataAPI(link); 
-        let title = detail_film.name; 
-        let description = detail_film.summary; 
-        let image = detail_film.image.original; 
-        
-        // memperkecil ruang lingkup 
-        let popup_judul = popupmovies.querySelector('h1'); 
-        let popup_description = popupmovies.querySelector('.descriptions p'); 
-        let popup_detail = popupmovies.querySelector('.detail'); 
-
-        console.log(popup_judul); 
-        console.log(popup_description); 
-        console.log(popup_detail); 
-
-        popup_judul.innerHTML = title; 
-        popup_description.innerHTML = description; 
-        popup_detail.style.background = `url('${image}')`;
+    if(element.classList.contains('movie-card')) {
+        // alert("Kesini"); 
+        // console.log(element)
     }
 
 })
@@ -124,7 +104,6 @@ video.addEventListener('timeupdate', function(e) {
     let duration = video.duration; 
     let percenta = (currTime/duration) * 100; 
     progress.style.background = `linear-gradient(to right, red ${percenta}%, silver 0%)`; 
-    progress.value = percenta; 
     timer.innerHTML = `${formatDetik(currTime)} / ${formatDetik(duration)}`; 
 })
 

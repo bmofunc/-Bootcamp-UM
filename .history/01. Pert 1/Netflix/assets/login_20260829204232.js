@@ -24,22 +24,14 @@ async function getDataAPI(url) {
 }
 
 let api = `http://localhost/netflix/api.php?action=`; 
-let users = []; 
 window.onload = async function(e) {
     let link = api + "get_users"; 
-    users = await getDataAPI(link)
-    users = users.data; 
-    console.log(users)
-    
+    let users = getDataAPI(link); 
+    // console.log(users); 
 }
 
 
 
 i_login.addEventListener('click', function(e) {
-    let result = users.filter(item => item.username == i_username.value && item.password == i_password.value); 
-    if(result.length > 0) {
-        window.location.href = "admin.html"
-    } else {
-        alert("Username & Password tidak tersedia"); 
-    }
+    
 })

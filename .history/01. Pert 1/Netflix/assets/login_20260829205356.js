@@ -40,6 +40,6 @@ i_login.addEventListener('click', function(e) {
     if(result.length > 0) {
         window.location.href = "admin.html"
     } else {
-        alert("Username & Password tidak tersedia"); 
+        alert("Username & Password tidak tersedia")
     }
 })

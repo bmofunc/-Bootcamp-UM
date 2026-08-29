@@ -1,0 +1,21 @@
+// alert("Helo")
+const i_username = document.querySelector('.c_username'); 
+const i_password = document.querySelector('.c_password'); 
+const i_login = document.querySelector('.c_login'); 
+
+const i_form  = document.querySelector('form'); 
+console.log(i_form)
+
+console.log(i_username)
+console.log(i_password)
+console.log(i_login)
+
+i_form.addEventListener('submit', function(e) {
+    e.preventDefault(); // mengganti perilaku default dari suatu element
+})
+
+
+
+i_login.addEventListener('click', function(e) {
+    
+})

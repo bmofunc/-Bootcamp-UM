@@ -124,7 +124,7 @@ video.addEventListener('timeupdate', function(e) {
     let duration = video.duration; 
     let percenta = (currTime/duration) * 100; 
     progress.style.background = `linear-gradient(to right, red ${percenta}%, silver 0%)`; 
-    progress.value = percenta; 
+    progress.value = 
     timer.innerHTML = `${formatDetik(currTime)} / ${formatDetik(duration)}`; 
 })
 

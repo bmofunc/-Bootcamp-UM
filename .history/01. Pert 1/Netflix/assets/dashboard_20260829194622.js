@@ -24,7 +24,7 @@ const moviesCardList2 = (dataapi) => {
 
     let gambar = dataapi.show.image.medium; 
   
-  return `<div class="swiper-slide" data-idfilmku="${id}">
+  return `<div class="swiper-slide" data>
                         <div class="movie-card" style="background-image:url('${gambar}')">
                             ${topten}
                             <span class="recents">Recently Added</span>
@@ -54,31 +54,12 @@ const popupmovies    = document.querySelector('.popup-movies')
 
 
 // Event Bubbling  (element yg membutuhkan pengambilan data yg cukup lama)
-document.addEventListener('click', async function(e) { // input 
+document.addEventListener('click', function(e) { // input 
     // console.log("kesini"); 
     let element = e.target; 
     console.log(element)
     if(element.classList.contains('swiper-slide')) {
         popupmovies.classList.remove('hide'); 
-        let id = element.dataset.idfilmku; 
-        let link = `https://api.tvmaze.com/shows/${id}`;     
-        let detail_film = await getDataAPI(link); 
-        let title = detail_film.name; 
-        let description = detail_film.summary; 
-        let image = detail_film.image.original; 
-        
-        // memperkecil ruang lingkup 
-        let popup_judul = popupmovies.querySelector('h1'); 
-        let popup_description = popupmovies.querySelector('.descriptions p'); 
-        let popup_detail = popupmovies.querySelector('.detail'); 
-
-        console.log(popup_judul); 
-        console.log(popup_description); 
-        console.log(popup_detail); 
-
-        popup_judul.innerHTML = title; 
-        popup_description.innerHTML = description; 
-        popup_detail.style.background = `url('${image}')`;
     }
 
 })
@@ -124,7 +105,6 @@ video.addEventListener('timeupdate', function(e) {
     let duration = video.duration; 
     let percenta = (currTime/duration) * 100; 
     progress.style.background = `linear-gradient(to right, red ${percenta}%, silver 0%)`; 
-    progress.value = percenta; 
     timer.innerHTML = `${formatDetik(currTime)} / ${formatDetik(duration)}`; 
 })
 

@@ -39,7 +39,5 @@ i_login.addEventListener('click', function(e) {
     let result = users.filter(item => item.username == i_username.value && item.password == i_password.value); 
     if(result.length > 0) {
         window.location.href = "admin.html"
-    } else {
-        alert("Username & Password tidak tersedia"); 
     }
 })

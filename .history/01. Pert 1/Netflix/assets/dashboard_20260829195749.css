@@ -140,10 +140,8 @@ body {
     justify-content: flex-end; 
     align-items: flex-start;
     padding: 30px; 
-    background-repeat: no-repeat !important;
-    background-size:cover !important;
-    /* background-position x y */
-    background-position: 0 -230px !important;
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .popup-movies .detail h1 {
@@ -222,9 +220,7 @@ body {
 .popup-movies .descriptions  p {
     line-height: 1.5; 
     width: 100%;
-    /* border: 1px solid red;  */
-    height: 100px;
-    overflow: auto;
+    border: 1px solid red; 
 }
 
 /* Video Player */
